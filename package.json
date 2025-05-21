@@ -13,9 +13,11 @@
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "@google/genai": "1.0.0",
-    "tsx": "4.19.4"
+    "tsx": "4.19.4",
+    "wav": "1.0.2"
   },
   "devDependencies": {
-    "@types/node": "22.15.21"
+    "@types/node": "22.15.21",
+    "@types/wav": "1.0.4"
   }
 }
