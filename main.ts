@@ -6,7 +6,18 @@ const GEMINI_API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 async function main() {
-  const prompt = `TTS the following conversation between michi and manatchi:
+  const prompt = `TTS the following conversation between michi and manatchi.
+
+Character descriptions for voice acting:
+- michi: A sharp, quick-witted. Speaks with a VERY HIGH-PITCHED voice like a young girl, but in a SLOW and DELIBERATE tempo. Each word is pronounced clearly and slowly, creating a contrast between the high voice and measured pace.
+- manatchi: A fluffy, easygoing. Speaks with a normal tone but slowly, relaxed pace, and dreamy quality. Has a free-flowing, whimsical speaking style with occasional drawn-out words.
+
+Performance notes:
+- The conversation should feel like a warm comedy duo, with michi's rationality contrasting manatchi's airheaded charm
+- michi should sound slightly exasperated but caring, like dealing with a lovable but scatterbrained friend
+- manatchi should sound cheerful and oblivious, with genuine enthusiasm about AI despite missing the point
+
+Conversation:
 michi: みなさん、おはようございます。しっかり者ネコのミチです。今日も会議の前に、ちょこっとアイスブレイクのお時間ですよ〜。
 manatchi: おはようございますぴょん♪ ふわふわマナッチで〜す！あのねミチ、最近すっごいの！AIって、ホントに何でもできちゃうのよ〜！
 michi: うん、すごいよね。で、今朝も"AIに服を選んでもらった"って言ってたけど、上下ピンクなのに靴が黄色だったよ…？
@@ -40,7 +51,7 @@ manatchi: うん！AIに"頑張って"って言われる前に、自分でスイ
               speaker: 'michi',
               voiceConfig: {
                 prebuiltVoiceConfig: {
-                  voiceName: 'Aoede',
+                  voiceName: 'Io',
                 },
               },
             },
